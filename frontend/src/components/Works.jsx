@@ -5,104 +5,74 @@ const Works = () => {
   const [selectedWork, setSelectedWork] = useState(null);
 
   const works = [
+    // Professional Networking
     {
       id: 1,
-      title: 'Corporate Annual Conference',
-      client: 'Tech Solutions Pvt Ltd',
-      type: 'Corporate Event',
-      date: 'March 2024',
+      title: 'Hello Techies Meetup',
+      client: '@Shiash Infotech',
+      type: 'Networking',
+      date: 'TBD',
       location: 'Chennai',
-      image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg',
-      video: 'https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4', // Auto-playing video added
-      description: 'Organized a large-scale corporate conference with 500+ attendees featuring keynote speakers, breakout sessions, and networking events.',
+      image: '/assets/HelloTechies1.jpeg',
+      description: 'A special event connecting tech professionals, innovators, and industry leaders.',
       embedLink: ''
     },
     {
       id: 2,
-      title: 'Grand Wedding Celebration',
-      client: 'Sharma Family',
-      type: 'Wedding Event',
-      date: 'February 2024',
+      title: 'Hello Techies Connect',
+      client: '@Shiash Infotech',
+      type: 'Networking',
+      date: 'TBD',
       location: 'Chennai',
-      image: 'https://images.pexels.com/photos/758898/pexels-photo-758898.png',
-      description: 'Complete wedding coordination including venue setup, catering management, entertainment, and guest coordination for 800+ guests.',
+      image: '/assets/HelloPro.png',
+      description: 'An exclusive networking meetup designed for collaboration and growth.',
       embedLink: ''
     },
     {
       id: 3,
-      title: 'Professional Business Networking',
-      client: 'Chennai Business Forum',
-      type: 'Networking Event',
-      date: 'January 2024',
+      title: 'Editors Connect for Pro Editors Club',
+      client: '@Kamarajar Arangam',
+      type: 'Networking',
+      date: 'TBD',
       location: 'Chennai',
-      image: 'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg',
-      description: 'High-profile business networking event connecting 200+ entrepreneurs and industry leaders with structured networking sessions and panel discussions.',
+      image: '/assets/EditorsConnect.jpeg',
+      description: 'A dedicated connect event bridging professionals in the creative editing space.',
       embedLink: ''
     },
+    // Corporate Events
     {
       id: 4,
-      title: 'Excellence Awards Gala',
-      client: 'Industry Excellence Foundation',
-      type: 'Award Show',
-      date: 'December 2023',
+      title: 'Carrer Launchpad for Error Makes Clever',
+      client: '@Cowrks',
+      type: 'Corporate',
+      date: 'TBD',
       location: 'Chennai',
-      image: 'https://images.pexels.com/photos/50675/banquet-wedding-society-deco-50675.jpeg',
-      description: 'Prestigious award ceremony recognizing industry leaders with elegant stage setup, award presentations, and celebrity host coordination.',
+      image: '/assets/CareerLaunchPad.png',
+      description: 'A dedicated corporate launchpad event for career acceleration and placement.',
       embedLink: ''
     },
+    // School and College-events
     {
       id: 5,
-      title: 'Tech Innovation Expo',
-      client: 'Chennai Tech Hub',
-      type: 'Expo',
-      date: 'November 2023',
-      location: 'Chennai',
-      image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg',
-      description: 'Major technology exhibition featuring 100+ exhibitors, product showcases, booth management, and visitor coordination.',
-      embedLink: ''
-    },
-    {
-      id: 6,
-      title: 'Cultural Festival',
-      client: 'Community Welfare Association',
-      type: 'Community Event',
-      date: 'October 2023',
-      location: 'Chennai',
-      image: 'https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg',
-      description: 'Large-scale cultural festival with 2000+ attendees, featuring multiple performance stages, food stalls, and activity zones.',
-      embedLink: ''
-    },
-    {
-      id: 7,
-      title: 'Annual Day Celebration',
-      client: 'Greenfield International School',
-      type: 'School Event',
-      date: 'September 2023',
+      title: 'Oneyes-Startup Fest',
+      client: '@Sairam Engg College',
+      type: 'Institution',
+      date: 'TBD',
       location: 'Chennai',
       image: 'https://images.pexels.com/photos/35532879/pexels-photo-35532879.jpeg',
-      description: 'School annual day with student performances, stage management, sound and lighting, and audience coordination.',
+      description: 'Startup fest and tech exhibition designed for students and upcoming entrepreneurs.',
       embedLink: ''
     },
+    // Community Events
     {
-      id: 8,
-      title: 'Live Stage Performance',
-      client: 'Arts & Culture Society',
-      type: 'Cultural Event',
-      date: 'August 2023',
+      id: 6,
+      title: 'CFC Special Edition',
+      client: '@IITM Research Park',
+      type: 'Community',
+      date: 'TBD',
       location: 'Chennai',
-      image: 'https://images.pexels.com/photos/35486044/pexels-photo-35486044.jpeg',
-      description: 'Professional stage setup for live performances including lighting design, sound engineering, and backstage management.',
-      embedLink: ''
-    },
-    {
-      id: 9,
-      title: 'Wedding Ceremony',
-      client: 'Kumar Family',
-      type: 'Wedding Event',
-      date: 'July 2023',
-      location: 'Chennai',
-      image: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg',
-      description: 'Traditional wedding ceremony coordination with decor, photography, catering, and guest management.',
+      image: '/assets/CFC.jpeg',
+      description: 'A special community-driven gathering focusing on specialized fields and networking.',
       embedLink: ''
     }
   ];
@@ -170,7 +140,7 @@ const Works = () => {
                   {work.title}
                 </h3>
                 
-                <p className="text-[15px] text-secondary font-semibold mb-4">
+                <p className="text-[16px] text-purple-600 dark:text-purple-500 font-bold mb-4 tracking-wide">
                   {work.client}
                 </p>
 
@@ -240,7 +210,7 @@ const Works = () => {
                 {selectedWork.title}
               </h3>
               
-              <p className="text-xl text-secondary font-semibold mb-8">
+              <p className="text-xl text-purple-600 dark:text-purple-500 font-bold mb-8">
                 {selectedWork.client}
               </p>
               
